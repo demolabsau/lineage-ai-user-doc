@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Lineage AI',
+  tagline: 'Data Lineage empowered by LLM',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -66,11 +66,11 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/favicon.png',
     navbar: {
-      title: 'My Site',
+      title: 'Lineage AI',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Linage AI Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -80,12 +80,7 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        {to: '/blog', label: 'Blog', position: 'left'}
       ],
     },
     footer: {
