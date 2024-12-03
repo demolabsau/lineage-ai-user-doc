@@ -18,8 +18,8 @@ export default function HomepageFeature() {
             transformations, and dependencies, empowering efficient and secure data governance.
           </p>
 
-          <Button className="mt-8" variant="primary" asChild>
-            <a href="#">Explore the system</a>
+          <Button className="mt-8" variant="primary">
+            Explore the system
           </Button>
         </>
       }

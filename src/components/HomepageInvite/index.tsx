@@ -27,7 +27,6 @@ export default function Component() {
           </p>
         </>
       }
-      ctaHref="#"
       ctaLabel="Start your journey now"
     />
 

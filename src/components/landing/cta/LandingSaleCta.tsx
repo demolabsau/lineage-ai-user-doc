@@ -101,7 +101,7 @@ export const LandingSaleCtaSection = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {secondaryCtaLabel}
+                
               </a>
             </Button>
           ) : null}
