@@ -67,6 +67,11 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/favicon.png',
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'Lineage AI',
       logo: {
