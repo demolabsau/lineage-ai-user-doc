@@ -1,70 +1,112 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import {
+  LandingProductTourSection,
+  LandingProductTourList,
+  LandingProductTourTrigger,
+  LandingProductTourContent,
+} from '@site/src/components/landing/LandingProductTour';
+import { VideoPlayer } from '@site/src/components/shared/VideoPlayer';
 
-type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: JSX.Element;
-};
-
-const FeatureList: FeatureItem[] = [
-  {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
-
-function Feature({title, Svg, description}: FeatureItem) {
+export default function HomepageFeatures() {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
+    <>
+      <LandingProductTourSection
+        titleComponent={
+          <h2 className="text-5xl font-semibold leading-tight">
+            Effortless data lineage
+            <br />
+            Unmatched insights in moments
+          </h2>
+        }
+        descriptionComponent={
+          <div className="flex flex-col max-w-xl">
+            <p className="mt-4 md:text-xl">
+              Demo Labs Lineage AI is an advanced solution for understanding and
+              documenting data flows across your organization.
+            </p>
 
-export default function HomepageFeatures(): JSX.Element {
-  return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
-    </section>
+            <p className="mt-4 md:text-xl opacity-50">
+              It automatically analyzes code, tracks data transformations, and
+              visualizes dependencies, empowering your data governance strategy.
+            </p>
+          </div>
+        }
+        defaultValue="feature-1"
+      >
+        <LandingProductTourList>
+          <LandingProductTourTrigger value="feature-1">
+            <p className="text-xl font-bold">Intelligent code analysis</p>
+            <p>
+              Utilize cutting-edge on-premises LLM to analyze transformation code, translating it into clear, 
+              human-readable descriptions and visual flows.
+            </p>
+          </LandingProductTourTrigger>
+
+          <LandingProductTourTrigger value="feature-2">
+            <p className="text-xl font-bold">Column-level transformation tracking</p>
+            <p>
+              Track complex data transformations across multiple files and systems at column level,
+               ensuring complete lineage visibility.
+            </p>
+          </LandingProductTourTrigger>
+
+          <LandingProductTourTrigger value="feature-3">
+            <p className="text-xl font-bold">Customizable schema mapping</p>
+            <p>
+              Automatically detect and map schemas while allowing manual adjustments
+              for greater control over your data lineage analysis.
+            </p>
+          </LandingProductTourTrigger>
+
+          <LandingProductTourTrigger value="feature-4">
+            <p className="text-xl font-bold">Real-time visualization</p>
+            <p>
+              Instantly visualize data flows and dependencies with an intuitive,
+              cloud-native interface, enabling faster decision-making.
+            </p>
+          </LandingProductTourTrigger>
+        </LandingProductTourList>
+
+        <LandingProductTourContent
+          value="feature-1"
+        >
+          <VideoPlayer
+            className={'w-full rounded-md'}
+            src="https://cache.shipixen.com/features/11-pricing-page-builder.mp4"
+            autoPlay={true}
+            controls={false}
+            loop={true}
+          />
+        </LandingProductTourContent>
+        <LandingProductTourContent value="feature-2">
+          <VideoPlayer
+            className={'w-full rounded-md'}
+            src={'https://cache.shipixen.com/features/21-run-locally.mp4'}
+            autoPlay={true}
+            controls={false}
+            loop={true}
+          />
+        </LandingProductTourContent>
+        <LandingProductTourContent value="feature-3">
+          <VideoPlayer
+            className={'w-full rounded-md'}
+            src={
+              'https://cache.shipixen.com/features/22-landing-page-components.mp4'
+            }
+            autoPlay={true}
+            controls={false}
+            loop={true}
+          />
+        </LandingProductTourContent>
+        <LandingProductTourContent value="feature-4">
+          <VideoPlayer
+            className={'w-full rounded-md'}
+            src={'https://cache.shipixen.com/features/20-mobile-optimized.mp4'}
+            autoPlay={true}
+            controls={false}
+            loop={true}
+          />
+        </LandingProductTourContent>
+      </LandingProductTourSection >
+    </>
   );
 }
