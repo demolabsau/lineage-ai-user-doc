@@ -87,7 +87,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          type: 'link',
+          href: '#',
           label: 'Try Our Demo',
           position: 'right',
         }

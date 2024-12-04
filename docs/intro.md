@@ -2,46 +2,56 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to **Demo Labs Lineage AI**, an LLM-driven data lineage platform that automates the complex task of data lineage tracking and analysis in modern data environments.
 
-## Getting Started
+## Overview
 
-Get started by **creating a new site**.
+Demo Labs Lineage AI leverages advanced Large Language Models (LLMs) to understand and map data transformations across various code bases and data processing pipelines.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### Key Features
 
-### What you'll need
+- **Intelligent Code Analysis**
+  - Advanced analysis for Python and SQL code
+  - Automated parsing and interpretation of various file formats (Python, SQL, CSV, Parquet)
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- **Real-Time Data Lineage Tracking**
+  - Visualize data transformation processes through a web interface
+  - Provides data state nodes with columns and transformation edges with original raw code references
 
-## Generate a new site
+- **Automated Schema Detection and Mapping**
+  - Detects and maps schemas automatically
+  - Allows manual adjustments for greater control over your data lineage analysis
 
-Generate a new Docusaurus site using the **classic template**.
+- **Secure and Scalable Cloud Infrastructure**
+  - Cloud-native architecture
+  - Private LLM deployment ensures sensitive data never leaves your organization's control
 
-The classic template will automatically be added to your project after you run the command:
+## Benefits
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### Enhanced Data Security
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- Complete data privacy and security compliance
+- No exposure to external cloud-based AI services
+- Ability to perform lineage analysis using only database schemas without accessing sensitive data
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### Cost Efficiency
 
-## Start your site
+- Reduces manual effort in data lineage analysis
+- Faster time-to-insight leads to reduced operational costs
+- 24/7 automated operation without human intervention
 
-Run the development server:
+### Technical Advantages
 
-```bash
-cd my-website
-npm run start
-```
+- **Improved Data Governance**: Automated tracking ensures compliance and accountability
+- **Enhanced Efficiency**: Simplifies mapping of data flows and dependencies
+- **Better Decision Making**: Clear visibility into data transformation processes
+- **Risk Reduction**: Identifies potential issues in data pipelines early
+- **Scalability**: Flexible scaling based on demand with cloud-native architecture
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Get Started
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+Explore how Demo Labs Lineage AI can transform your data lineage tracking. Dive into our documentation to learn more and get started today!
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+---
