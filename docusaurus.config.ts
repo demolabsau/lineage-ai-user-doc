@@ -80,14 +80,35 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: 'help',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Guide Center',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: '#',
+          type: 'doc',
+          docId: 'deploy/intro',
+          position: 'left',
+          label: 'Deployment',
+        },
+        {
+          type: 'doc',
+          docId: 'usage/intro',
+          position: 'left',
+          label: 'Usage',
+        },
+        {
+          type: 'doc',
+          docId: 'faq',
+          position: 'left',
+          label: 'FAQ',
+        },
+        // {
+        //   to: '/blog',
+        //   label: 'Blog',
+        //   position: 'left',
+        // },
+        {
+          href: 'https://lineageai.demolabs.com.au/',
           label: 'Try Our Demo',
           position: 'right',
         }

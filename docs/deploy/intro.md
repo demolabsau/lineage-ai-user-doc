@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 ---
 
 # Deployment Overview
@@ -29,8 +29,8 @@ To deploy the application on your cloud infrastructure, follow these high-level 
 
 1. **Obtain Docker Images**
 
-   - The Docker images for each component are stored in our Google Cloud Platform (GCP) Artifact Registry.
-   - We use **Workload Identity Pools** to grant your cloud services the necessary permissions to access and pull these images.
+   - The Docker images for each component are stored in our private docker image repository.
+   - Contact our support team to grant you access to our image repository
 
 > Please following cloud vendor specific steps to finsh deploy process
 
