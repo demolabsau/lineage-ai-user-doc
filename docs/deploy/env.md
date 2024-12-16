@@ -1,4 +1,7 @@
-# Environment Variables Configuration
+---
+sidebar_position: 8
+---
+# Environment Variables Reference
 
 This document describes the environment variables required for the Data Lineage API backend.
 
