@@ -88,7 +88,7 @@ const config: Config = {
           type: 'doc',
           docId: 'deploy/intro',
           position: 'left',
-          label: 'Deployment',
+          label: 'Deploy',
         },
         {
           type: 'doc',
