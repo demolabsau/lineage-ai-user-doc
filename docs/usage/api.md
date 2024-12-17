@@ -465,18 +465,20 @@ All endpoints return standardized error responses in the following format:
 ## Best Practices
 
 1. **UFW Repository Structure:**
-    - Ensure your UFW repository follows the standard structure with Control-M configurations in the correct locations
+    - Ensure your UFW repository follows the standard structure with Control-M configurations in the correct locations (If the directory structure does not match the following or has been updated, please contact the Demo Labs team for modification)
     - XML files should be in the `control-m/{ENV}/` directory
-    - Python scripts should be in the `scripts/` directory
-    - Metadata files should be in the `metadata/` directory
+    - Pipeline files should be in the `metadata/pipelines` directory
+    - Python scripts should be in the `scr/` directory
+    - Sql scripts should be in the `sql/` directory
+    - Metadata files should be in the `metadata/datasets` directory
 
-2. **GitHub Access:**
-    - Use a GitHub token with appropriate read permissions
+2. **GitHub/Bitbucket Access:**
+    - Use a GitHub/Bitbucket token with appropriate read permissions
     - For private repositories, ensure the token has repository access
 
 3. **Error Handling:**
     - Always check the report status after submission
-    - If a report fails, check the error message in the report details
+    - If a report fails, check the error message in the report details or you also can check logs by report id
 
 ## Support
 
