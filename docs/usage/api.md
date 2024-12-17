@@ -91,7 +91,7 @@ This endpoint handles analysis of one or more Python or SQL files, code files an
 - `customer_id` (required): Your unique customer identifier
 - `report_name` (required): Name for your analysis report
 - `files` (optional): Array of files to analyze (Python/SQL/JSON)
-- `repos` (optional): JSON string containing repository information
+- `repos` (optional): JSON string containing repository information. Must be provided if no files are uploaded.
 
 **Example Request (File Upload):**
 ```curl
@@ -100,20 +100,23 @@ curl -X POST "https://api.lineageai.example.com/lineage-llm/report" \
   -F "customer_id=cust123" \
   -F "report_name=PythonAnalysis" \
   -F "files=@script1.py" \
-  -F "files=@script2.py"
+  -F "files=@script2.py" \
+  -F "files=@schema.json"
 ```
 
 **Example Request (Repository Analysis):**
 ```curl
 curl -X POST "https://api.lineageai.example.com/lineage-llm/report" \
   -H "Authorization: Bearer your_api_key" \
+  -H "Content-Type: multipart/form-data" \
   -F "customer_id=cust123" \
   -F "report_name=RepoAnalysis" \
   -F 'repos=[{
-    "link": "https://github.com/organization/repo",
-    "token": "github_pat_xxx",
-    "branch": "main"
-  }]'
+      "link": "Repository URL (required)",
+      "token": "Access token for private repositories (required)",
+      "branch": "Repository branch (optional, defaults to 'main')",
+      "state": "Environment state (optional, defaults to 'dev')"
+    }]'
 ```
 
 **Response Codes:**
@@ -303,12 +306,16 @@ Search and retrieve system logs with various filters.
 **Endpoint:** `GET /lineage-llm/logs`
 
 **Query Parameters:**
-- `start_time`(optional): Start time for log range (ISO format)
-- `end_time`(optional): End time for log range (ISO format)
-- `min_level`(optional): Minimum log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-- `report_id`(optional): Filter logs by report ID
-- `page`(optional): Page number (default: 1)
-- `size`(optional): Items per page (default: 20)
+- `start_time` (optional): Start time for log range (ISO format: YYYY-MM-DD HH:MM:SS)
+- `end_time` (optional): End time for log range (ISO format: YYYY-MM-DD HH:MM:SS)
+- `min_level` (optional): Minimum log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+- `report_id` (optional): Filter logs by report ID
+- `error_type` (optional): Filter by error type (e.g., 'ReportError', 'SystemError')
+- `additional_info_key` (optional): Search for specific key in additional_info field
+- `additional_info_value` (optional): Match value for the specified additional_info_key
+- `page` (optional): Page number (default: 1)
+- `size` (optional): Items per page (default: 20)
+
 
 **Example Request:**
 ```curl
@@ -454,10 +461,10 @@ All endpoints return standardized error responses in the following format:
 
 ```json
 {
-  "message": "Error description",
-  "code": 400,
+  "message": "Detailed error description",
+  "code": 400, // HTTP status code
   "details": {
-    "additional": "error details"
+    // Additional error context, varies by error type
   }
 }
 ```
