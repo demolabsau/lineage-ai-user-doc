@@ -1,4 +1,4 @@
-# Lineage-AI API Documentation - User Guide
+# Quick start for Lineage-AI backend API
 
 ## Overview
 
