@@ -157,7 +157,7 @@ export default function HelpCenter() {
           <LandingPrimaryTextCtaSection
             title={
               <>
-                Help Guides
+                Quick Guides
               </>
             }
             description="Get started with our help guides to learn how to setup and use our platform."
